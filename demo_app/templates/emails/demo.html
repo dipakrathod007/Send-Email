@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello,</p>
+    <p>Here are the latest 5 sales invoices for Item: <strong>{{ item_code }}</strong>.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Invoice Name</th><br>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in sid %}
+            <tr>
+                <td>{{ i.parent }}</td>
+                <td>{{ i.posting_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p>Best Regards,<br>{{name}}</p>
+</body>
+</html>
